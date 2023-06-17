@@ -1,0 +1,25 @@
+{
+  "name": "nexter",
+  "version": "1.0.0",
+  "description": "Small project for learning advanced CSS and SASS",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html --target default",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrWalt/nexter.git"
+  },
+  "author": "MrWalt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrWalt/nexter/issues"
+  },
+  "homepage": "https://github.com/MrWalt/nexter#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.2",
+    "parcel": "^2.9.2"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
