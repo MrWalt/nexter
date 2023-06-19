@@ -25,7 +25,29 @@
     justify-self: start;
   }
 
+  &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    gap: 1.4rem;
+    align-items: center;
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+
   &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.2rem;
+    justify-items: center;
+    filter: brightness(70%);
     img {
       height: 2.4rem;
     }
