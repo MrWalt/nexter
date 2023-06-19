@@ -34,10 +34,20 @@ body {
   line-height: 1.6;
 }
 
-// MIXINS EXTENDS INCLUDES
+// MIXINS / PLACEHOLDERS
 %heading {
   font-family: $font-display;
   font-weight: 400;
+}
+
+@mixin colorMode() {
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 // GENERAL
@@ -50,15 +60,59 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 }
 
+.heading-secondary {
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  @include colorMode();
+}
+
+.heading-tertiary {
+  @extend %heading;
+  font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: uppercase;
+}
+
 .heading-quarternary {
   @extend %heading;
   font-size: 1.8rem;
 
-  &--light {
-    color: $color-grey-light-1;
-  }
+  @include colorMode();
+}
 
-  &--dark {
-    color: $color-grey-dark-1;
+.btn {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: $font-display;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-primary-dark;
   }
+}
+
+// HELPERS
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3.2rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
 }
