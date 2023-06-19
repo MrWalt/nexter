@@ -60,8 +60,18 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 }
 
+.heading-primary {
+  @extend %heading;
+
+  font-size: 4.6rem;
+  line-height: 1;
+
+  @include colorMode();
+}
+
 .heading-secondary {
   @extend %heading;
+
   font-size: 4rem;
   font-style: italic;
   line-height: 1;
@@ -71,6 +81,7 @@ body {
 
 .heading-tertiary {
   @extend %heading;
+
   font-size: 1.6rem;
   color: $color-primary;
   text-transform: uppercase;
@@ -78,6 +89,7 @@ body {
 
 .heading-quarternary {
   @extend %heading;
+
   font-size: 1.8rem;
 
   @include colorMode();
