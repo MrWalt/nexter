@@ -34,6 +34,13 @@ body {
   line-height: 1.6;
 }
 
+// MIXINS EXTENDS INCLUDES
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+// GENERAL
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
@@ -41,4 +48,17 @@ body {
     [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.heading-quarternary {
+  @extend %heading;
+  font-size: 1.8rem;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
