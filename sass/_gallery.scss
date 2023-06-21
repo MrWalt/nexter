@@ -10,6 +10,7 @@
 
   @include respond(tab-small) {
     gap: 0.8rem;
+    padding: 0.8rem;
   }
 
   &__item {
