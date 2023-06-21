@@ -50,6 +50,9 @@ body {
   }
 }
 
+@mixin respond($breakpoint) {
+}
+
 // GENERAL
 .container {
   display: grid;
