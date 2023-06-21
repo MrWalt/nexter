@@ -9,12 +9,24 @@
   justify-items: center;
   row-gap: 2rem;
 
+  @include respond(tab-portrait) {
+    grid-column: 1 / -1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 3vh;
     align-items: center;
+
+    @include respond(tab-portrait) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @include respond(tab-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__sold {

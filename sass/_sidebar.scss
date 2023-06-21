@@ -6,6 +6,13 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+
+  @include respond(tab-landscape) {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .nav-btn {
@@ -34,5 +41,18 @@
 
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  @include respond(tab-landscape) {
+    margin-top: 0;
+    margin: 2.4rem;
+
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }
